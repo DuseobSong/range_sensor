@@ -1,0 +1,9 @@
+<arg name="camera_direction" default="left"/>
+<arg name="range_threshold"  default="0.5"/>
+
+<launch>
+    <node pkg="range_sensor" name="range_sensor" type="range_sensor.py">
+        <param name="camera_direction" value="$(arg camera_direction)"/>
+        <param name="range_threshold"  value="$(arg range_threshold)"/>
+    </node>
+</launch>
